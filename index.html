@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="Nancle from CAU CS101" />
+<title>jquery-slide</title>
+</head>
+<script type="text/javascript" src="lib/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="jquery.bouncemenu.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('#nav').bouncemenu({	
+		'nav_current' : 1
+	});
+		
+})
+</script>
+
+<style type="text/css">
+	/*site css start*/
+	body{background:#89b543; font-family:Verdana, Geneva, sans-serif; font-size:14px; line-height:29px}
+	.wrapper{ width:800px; margin:0 auto;  margin-bottom:10px;  }
+	.wrapper h1{ text-align:center; width:800px; font-size:30px }
+	.tip{ width:740px; margin:0 auto; background:#fff; padding:6px 30px}
+	.tip h1{ font-size:14px; line-height:30px}
+	.tip h1 span{font-size:13px; font-weight:normal; margin-left:10px}
+	.tip p{ margin:0 } .tip a{ color:#000; text-decoration:none }
+	.tip .codeWrapper{ background:#eaeaea }
+	.tip code{font-size:13px; font-family:Verdana, Geneva, sans-serif;}
+	.tip ol{ background:#eaeaea;}
+	.tip ol li{ list-style: decimal-leading-zero; border-left: 3px solid #999; padding: 0 5px;}
+	/*site css end*/
+	
+	/*core css start*/
+	#nav{ position:relative; width:800px; height:70px; padding-bottom:10px; background:#fff}
+	#nav #nav_menu{ height:50px;}
+	#nav #nav_menu a{ display:block; float:left; height:50px; padding:0 33px; line-height:50px; color:#666; font-size:18px;
+	text-decoration:none;}
+	#nav #nav_animate_block{ position:absolute; top:60px; height:2px; overflow:hidden; background:#80b600;}
+	/*core css end*/
+</style>
+<body>
+	<div class="wrapper">
+    	<h1>jQuery-slider</h1>
+    </div>
+	     
+    <div class="wrapper">
+        <div id="nav">
+            <div id="nav_menu">
+                <a href="#">首页</a>
+                <a href="#">产品列表</a>
+                <a href="#">客户案例</a>
+                <a href="#">服务平台</a>
+                <a href="#">交流论坛</a>
+                <a href="#">关于我们</a>
+            </div>
+            <div id="nav_animate_block"></div>
+        </div>
+    </div>
+    <div class="tip">	
+    	<h1>经过IE6&IE6+，chrome，firefox测试兼容<span>使用方法： {yourId}替换成你的id</span></h1>
+      
+        <h1>HTML</h1>
+        <div class="codeWrapper">
+        	<ol>
+            	<li><code>&lt;div class="{yourId}"&gt;</code></li>
+                <li><code>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="{yourId}_menu"&gt;</code></li>
+                <li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="#"&gt;导航一&lt;/a&gt;</code></li>
+                <li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="#">导航二&lt;/a&gt;</code></li>
+                <li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="#">导航三&lt;/a&gt;</code></li>
+                <li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="#">...&lt;/a&gt;</code></li>
+                <li><code>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;</code></li>
+                <li><code>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div id="{yourId}_animate_block"&gt;&lt;/div&gt;</code></li>
+                <li><code>&lt;/div&gt;</code></li>
+            </ol>
+        </div>
+        
+        <h1>CSS<span>以下这些参数可以根据需要自行调整</span></h1>
+        <div class="codeWrapper">
+            <ol>
+                <li><code>#nav{ position:relative; width:px; height:70px; padding-bottom:10px; background:#fff}</code></li>
+                <li><code>#nav #nav_menu{ height:50px;}</code></li>
+                <li><code>#nav #nav_menu a{ display:block; float:left; height:50px; padding:0 33px; line-height:50px; color:#666; font-size:18px;
+	text-decoration:none;}</code></li>
+                <li><code>#nav #nav_animate_block{ position:absolute; top:60px; height:2px; overflow:hidden; background:#80b600;}</code></li>
+            </ol>
+        </div>
+       
+        <h1>JS</h1>
+        <div class="codeWrapper">
+        	<ol>
+            	<li><code>&lt;script type="text/javascript" src="lib/jquery-1.9.1.js"&gt;&lt;/script&gt;</code></li>
+                <li><code>&lt;script type="text/javascript" src="jquery.bouncemenu.js"&gt;&lt;/script&gt;</code></li>
+            </ol>
+        </div>
+        
+        <h1>调用	</h1>
+        <div class="codeWrapper">
+            <ol>
+                <li><code>$("#{yourId}").bouncemenu({</code></li>
+                <li><code>&nbsp;&nbsp;&nbsp;&nbsp;'nav_current' : {nav索引},  //设置当前nav，{nav索引}替换成你想要的第N个nav的索引(n-1)，默认值是0,即第一个</code></li>
+                <li><code>});</code></li>
+            </ol>
+        </div>
+        
+        <h1><strong>下载地址</strong>：<a href="https://github.com/7LI/jQuery-slider" target="_blank">https://github.com/7LI/jQuery-slider</a></h1>
+        <p>作者： <em>Nancle from CAU CS101</em></p>
+        <p><a href="http://blog.csdn.net/liuyanzhi08" target="_blank">博客：http://blog.csdn.net/liuyanzhi08	</a></p>
+    </div>
+	
+</body>
+</html>

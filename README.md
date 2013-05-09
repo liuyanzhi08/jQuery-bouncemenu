@@ -34,4 +34,4 @@
         $("#{yourId}").bouncemenu({
 		    'nav_current' : {nav索引}, //设置当前nav，{nav索引}替换成你想要的第N个nav的索引(n-1)，默认值是0,即第一个
 	    });
-*演示地址： [http://quchen.cau.edu.cn/jsDev/jquery-boucemenu/](http://quchen.cau.edu.cn/jsDev/jquery-boucemenu/") .
+*演示地址： [http://quchen.cau.edu.cn/jsDev/jquery-boucemenu/](http://quchen.cau.edu.cn/jsDev/jquery-boucemenu/) .
